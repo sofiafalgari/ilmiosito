@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Il mio sito</title>
+
+<style>
+body {
+    font-family: Verdana;
+    text-align: center;
+    margin-top: 100px;
+    background-color: #f4f4f4;
+}
+</style>
+
+</head>
+<body>
+
+Ciao! Quale materie preferisci tra queste? </br>
+
+<button onclick="rispondi(1)">TPS</button>
+<button onclick="rispondi(2)">Telecomunizazioni</button>
+<button onclick="rispondi(3)">Sistemi e reti</button>
+<button onclick="rispondi(4)">Informatica</button>
+
+<p id="risposta"></p>
+
+<script>
+function rispondi(scelta) {
+    let testo = "";
+
+    if (scelta === 1) {
+        testo = "è una buona scelta";
+    } else if (scelta === 2) {
+        testo = "è una bella scelta";
+    } else if (scelta === 3) {
+        testo = "è una scelta interessante..";
+    } else if (scelta === 4) {
+        testo = "è una scelta fantastica, complimenti!";
+    }
+
+    document.getElementById("risposta").textContent = testo;
+}
+</script>
+
+</body>
+</html>
